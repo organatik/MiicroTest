@@ -1,0 +1,87 @@
+<div class="col-md-12 wrapper">
+  <div class="row">
+    <div class="col-md-12 filter">
+      <div class="row">
+        <div class="col-md-1 ">
+          <span>Счета</span>
+        </div>
+        <div class="col-md-2">
+          <select id="GATE" [(ngModel)]="GATE" name="GATE">
+            <option [ngValue]="undefined" disabled  selected>Выбрать GATE</option>
+            <option [ngValue]="undefined"  selected>Все</option>
+            <option *ngFor="let gate of uniqueGate" >{{ gate }}</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <select  id="ACCOUNT_TYPE" [(ngModel)]="ACCOUNT_TYPE" name="ACCOUNT_TYPE">
+            <option [ngValue]="undefined" disabled  selected>Выбрать тип</option>
+            <option [ngValue]="undefined"  selected>Все</option>
+            <option *ngFor="let account of accounts" [ngValue]="account.ACCOUNT_TYPE">{{ account.ACCOUNT_TYPE }}</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select  id="SCORE" [(ngModel)]="SCORE" name="SCORE">
+            <option [ngValue]="undefined" disabled  selected>Выбрать счет</option>
+            <option [ngValue]="undefined"  selected>Все</option>
+            <option *ngFor="let account of accounts" [ngValue]="account.ACCOUNT">{{ account.ACCOUNT_TYPE }} #{{ account.ACCOUNT }} {{ account.CURRENCY }}</option>
+          </select>
+        </div>
+        <div class="col-md-2" style="float: right;">
+          <div id="toggles">
+            <input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle" checked/>
+            <label for="checkbox1" class="checkbox-label" data-off="real" data-on="demo"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row one-score" *ngFor="let account of ( accounts | selectAccount:SCORE | selectAccountType: ACCOUNT_TYPE | selectGate: GATE); let index = index;">
+    <div class="score-info">
+      <span>{{ account.GATE }}</span>
+      <span style="    width: 200px;display: inline-block;text-align: center;">{{ account.ACCOUNT_TYPE }} #{{ account.ACCOUNT }} {{ account.CURRENCY }}</span>
+      <i class="fa fa-cog" aria-hidden="true" (click)="selectItem(index)"></i>
+      <div class="drop" [class.active]=" index == selectedItem && showedDrop">
+        <ul>
+          <li>Пополнить счет</li>
+          <li>Вывести средства</li>
+          <li>Трансфер</li>
+          <li>Изменить плечо</li>
+          <li>Изменить торговый пароль</li>
+          <li (click)="deleteScore(getIndex(account))">Удалить счет</li>
+          <li>{{ getIndex(account) }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row one-account">
+      <div class="col-md-2">
+        <p>Плечо</p>
+        <p>1:{{ account.LEVERAGE }}</p>
+      </div>
+      <div class="col-md-2">
+        <p>Баланс</p>
+        <p>{{ account.BALANCE }}</p>
+      </div>
+      <div class="col-md-2">
+        <p>Кредит</p>
+        <p>{{ account.CREDIT }}</p>
+      </div>
+      <div class="col-md-2">
+        <p>Средства</p>
+        <p>{{ account.EQUITY }}</p>
+      </div>
+      <div class="col-md-2">
+        <p>Свободно</p>
+        <p>{{ account.FREE }}</p>
+      </div>
+      <div class="col-md-2">
+        <p>Уровень</p>
+        <p>{{ account.LEVEL }}%</p>
+      </div>
+      <div class="col-md-2">
+        <p>Прибыль</p>
+        <p>{{ account.BALANCE }}</p>
+      </div>
+    </div>
+  </div>
+</div>

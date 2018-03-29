@@ -1,0 +1,31 @@
+<div class="col-md-12 wrapper" *ngFor=" let asset of assets" >
+  <p>Активы</p>
+  <div class="col-md-2 column">
+    <p>Всего средств</p>
+    <p>$ {{ asset.TOTAL.USD }}</p>
+    <p>€ {{ asset.TOTAL.EUR }}</p>
+    <p>₽ {{ asset.TOTAL.RUB }}</p>
+  </div>
+  <div class="col-md-2 column">
+    <p>Торговые счета</p>
+    <p>$ {{ asset.ACCOUNT.USD }}</p>
+  </div>
+  <div class="col-md-2 column">
+    <p>Сейф</p>
+    <p>$ {{ asset.SAFE.USD }}</p>
+    <p>€ {{ asset.SAFE.EUR }}</p>
+    <p>₽ {{ asset.SAFE.RUB }}</p>
+  </div>
+  <div class="col-md-2 column">
+    <p>Приведи друга</p>
+    <p>$ {{ asset.FRIEND.USD }}</p>
+  </div>
+  <div class="col-md-2 column">
+    <p>Копилка</p>
+    <p>$ {{ asset.MONEY_BOX.USD }}</p>
+  </div>
+  <div class="col-md-2 column">
+    <p>Партнер</p>
+    <p>$ {{ asset.PARTNER.USD }}</p>
+  </div>
+</div>
