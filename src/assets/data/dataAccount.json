@@ -1,0 +1,54 @@
+            [
+            {
+                'ACCOUNT': '1059',
+                'LEVERAGE': '500',
+                'CURRENCY': 'USD',
+                'BALANCE': '195235.03',
+                'CREDIT': '0.00',
+                'EQUITY': '95235.03',
+                'FREE': '53.01',
+                'LEVEL': '56.78'
+                'PROFIT': '1320.00',
+                'ACCOUNT_TYPE': 'PREMIUM',
+                'GATE': 'MT4'
+            },
+            {
+                'ACCOUNT': '67897',
+                'LEVERAGE': '100',
+                'CURRENCY': 'EUR',
+                'BALANCE': '4235.03',
+                'CREDIT': '70.00',
+                'EQUITY': '435.03',
+                'FREE': '13.01',
+                'LEVEL': '6.78'
+                'PROFIT': '8320.00',
+                'ACCOUNT_TYPE': 'PRO',
+                'GATE': 'MT5'
+            },
+            {
+                'ACCOUNT': '8905',
+                'LEVERAGE': '1000',
+                'CURRENCY': 'USD',
+                'BALANCE': '55.03',
+                'CREDIT': '10.00',
+                'EQUITY': '455.03',
+                'FREE': '453.01',
+                'LEVEL': '96.78'
+                'PROFIT': '420.00',
+                'ACCOUNT_TYPE': 'MICRO',
+                'GATE': 'MT4'
+            }, 
+                   {
+                'ACCOUNT': '9959',
+                'LEVERAGE': '500',
+                'CURRENCY': 'USD',
+                'BALANCE': '100235.03',
+                'CREDIT': '23.00',
+                'EQUITY': '90235.03',
+                'FREE': '76.01',
+                'LEVEL': '56.78'
+                'PROFIT': '9920.00',
+                'ACCOUNT_TYPE': 'DEMO',
+                'GATE': 'MT4'
+            },            
+            ]
