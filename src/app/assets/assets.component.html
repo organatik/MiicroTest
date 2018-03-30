@@ -19,7 +19,6 @@
   <div class="col-md-2 column">
     <p>Копилка</p>
     <p *ngFor="let key of asset.MONEY_BOX | keys"> {{ asset.MONEY_BOX[key] | currency: key }}</p>
-    <p>$ {{ asset.MONEY_BOX.USD }}</p>
   </div>
   <div class="col-md-2 column">
     <p>Партнер</p>
