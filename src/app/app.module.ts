@@ -12,6 +12,8 @@ import {GetAccountService} from './services/get-account.service';
 import { SelectAccountPipe } from './pipes/select-account.pipe';
 import { SelectAccountTypePipe } from './pipes/select-account-type.pipe';
 import { SelectGatePipe } from './pipes/select-gate.pipe';
+import {NgPipesModule} from 'ngx-pipes';
+
 
 
 
@@ -32,6 +34,7 @@ import { SelectGatePipe } from './pipes/select-gate.pipe';
     HttpClientModule,
     FormsModule,
     NgbModule.forRoot(),
+    NgPipesModule
   ],
   providers: [
     GetAssetsService,

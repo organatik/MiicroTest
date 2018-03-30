@@ -2,30 +2,27 @@
   <p>Активы</p>
   <div class="col-md-2 column">
     <p>Всего средств</p>
-    <p>$ {{ asset.TOTAL.USD }}</p>
-    <p>€ {{ asset.TOTAL.EUR }}</p>
-    <p>₽ {{ asset.TOTAL.RUB }}</p>
+    <p *ngFor="let key of asset.TOTAL | keys"> {{ asset.TOTAL[key] | currency: key }}</p>
   </div>
   <div class="col-md-2 column">
     <p>Торговые счета</p>
-    <p>$ {{ asset.ACCOUNT.USD }}</p>
+    <p *ngFor="let key of asset.ACCOUNT | keys"> {{ asset.ACCOUNT[key] | currency: key }}</p>
   </div>
   <div class="col-md-2 column">
     <p>Сейф</p>
-    <p>$ {{ asset.SAFE.USD }}</p>
-    <p>€ {{ asset.SAFE.EUR }}</p>
-    <p>₽ {{ asset.SAFE.RUB }}</p>
+    <p *ngFor="let key of asset.SAFE | keys"> {{ asset.SAFE[key] | currency: key }}</p>
   </div>
   <div class="col-md-2 column">
     <p>Приведи друга</p>
-    <p>$ {{ asset.FRIEND.USD }}</p>
+    <p *ngFor="let key of asset.FRIEND | keys"> {{ asset.FRIEND[key] | currency: key }}</p>
   </div>
   <div class="col-md-2 column">
     <p>Копилка</p>
+    <p *ngFor="let key of asset.MONEY_BOX | keys"> {{ asset.MONEY_BOX[key] | currency: key }}</p>
     <p>$ {{ asset.MONEY_BOX.USD }}</p>
   </div>
   <div class="col-md-2 column">
     <p>Партнер</p>
-    <p>$ {{ asset.PARTNER.USD }}</p>
+    <p *ngFor="let key of asset.PARTNER | keys"> {{ asset.PARTNER[key] | currency: key }}</p>
   </div>
 </div>
